@@ -13,7 +13,7 @@ function Splash() {
 				</h1>
 
 				<h2 className={ style.SplashSubtitle }>
-					A small static site generator!
+					What a website!
 				</h2>
 			</div>
 		</div>
@@ -26,7 +26,6 @@ export default function Home() {
 			<Splash />
 
 			<PageBody>
-				<div className={ style.SpinningThing }>Amazing!</div>
 			</PageBody>
 		</React.Fragment>
 	);

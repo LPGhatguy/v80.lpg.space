@@ -8,7 +8,6 @@ import Footer from "./Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import RedirectHome from "./pages/RedirectHome";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -31,10 +30,6 @@ export default function App() {
 
 				<Route exact path="/about">
 					<About />
-				</Route>
-
-				<Route exact path="/redirect-home">
-					<RedirectHome />
 				</Route>
 
 				<Route path="*">

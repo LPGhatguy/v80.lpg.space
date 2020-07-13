@@ -1,5 +1,5 @@
-# [lpg.space](https://v80.lpg.space)
-Working on a new website, again!
+# [v80.lpg.space](https://v80.lpg.space)
+Working on a new website.
 
 ## Usage
 To run in development mode:

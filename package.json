@@ -1,7 +1,7 @@
 {
-  "name": "parcel-ssg-example",
-  "version": "1.0.0",
-  "description": "Example of generating a truly static website with Parcel and React.",
+  "name": "lpg.space",
+  "version": "80.0.0",
+  "description": "Personal website",
   "publish": false,
   "author": "Lucien Greathouse <me@lpghatguy.com>",
   "license": "MIT",

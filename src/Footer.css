@@ -1,11 +1,10 @@
 .Footer {
 	flex: 0 0;
-	background-color: #333;
-	color: #eee;
+	background-color: var(--color-bg-1);
 }
 
 .FooterInner {
-	max-width: 60rem;
+	max-width: var(--site-width);
+	padding: 2rem var(--site-padding);
 	margin: 0 auto;
-	padding: 3rem 0;
 }

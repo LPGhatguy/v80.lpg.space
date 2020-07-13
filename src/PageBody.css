@@ -3,6 +3,7 @@
 }
 
 .PageBodyInner {
-	max-width: 60rem;
+	max-width: var(--site-width);
+	padding: 0 var(--site-padding);
 	margin: 0 auto;
 }

@@ -1,23 +1,28 @@
 .Header {
 	flex: 0 0;
-	background-color: #333;
-	color: #eee;
+	background-color: var(--color-bg-1);
+	font-size: 1.2rem;
 }
 
 .HeaderInner {
-	max-width: 60rem;
+	max-width: var(--site-width);
+	padding: 0 var(--site-padding);
 	margin: 0 auto;
 
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	align-items: baseline;
 }
 
-.Logo {
-	margin-right: 2rem;
+.Title {
+	padding-right: 2rem;
+	font-size: 1.6rem;
 }
 
 .Nav {
 	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
 }
 
 .Nav > a {
@@ -25,5 +30,5 @@
 }
 
 .ActiveNavLink {
-	font-weight: bold;
+	border-bottom: 1px solid var(--color-highlight-1);
 }

@@ -1,0 +1,35 @@
+:root {
+	--site-width: 50rem;
+	--site-padding: 0;
+
+	--font-weight-1: 300;
+	--font-weight-2: 400;
+
+	--color-site-bg: #eee;
+	--color-site-text: rgba(0, 0, 0, 0.8);
+	--color-bg-1: #ddd;
+	--color-bg-2: #ccc;
+	--color-highlight-1: #d00;
+}
+
+@media (max-width: 1020px) {
+	:root {
+		--site-padding: 1rem;
+	}
+}
+
+:root {
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Lato, Helvetica Neue,
+		sans-serif;
+	font-weight: 300;
+	font-kerning: normal;
+	font-size: 20px;
+	line-height: 1.4;
+	word-wrap: break-word;
+}
+
+body {
+	background-color: var(--color-site-bg);
+	color: var(--color-site-text);
+}
