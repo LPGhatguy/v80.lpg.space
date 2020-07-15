@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import style from "./Footer.css";
 
@@ -10,7 +9,7 @@ import linkedin from "../resources/iconmonstr-linkedin-3.svg";
 const Item = ({ url, title, icon, children }) => (
 	<span className={ style.Item }>
 		<img className={ style.Icon } src={ icon } />
-		<Link title={ title } to={ url }>{ children }</Link>
+		<a title={ title } href={ url }>{ children }</a>
 	</span>
 );
 
