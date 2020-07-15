@@ -8,9 +8,19 @@ import Footer from "./Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import posts from "./posts";
 
 export default function App() {
+	const blogRoutes = posts.map(([body, metadata]) => {
+		return (
+			<Route exact key={ metadata.slug() } path={ metadata.route() }>
+				<BlogPost body={ body } metadata={ metadata } />
+			</Route>
+		);
+	});
+
 	return (
 		<MDXComponents>
 			<Helmet
@@ -19,6 +29,7 @@ export default function App() {
 			>
 				<meta charset="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+				<meta name="description" content="Website for Lucien Greathouse, also known as lpg." />
 			</Helmet>
 
 			<Header />
@@ -31,6 +42,8 @@ export default function App() {
 				<Route exact path="/about">
 					<About />
 				</Route>
+
+				{ blogRoutes }
 
 				<Route path="*">
 					<NotFound />

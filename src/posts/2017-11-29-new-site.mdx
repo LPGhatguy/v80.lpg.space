@@ -1,0 +1,21 @@
+import Post from "./Post";
+
+export const metadata = new Post({
+	title: "New site!",
+	date: [2017, 11, 29],
+	id: "new-site",
+});
+
+I built a fancy new site with some fun technology:
+
+* Node.js
+* Nginx as a reverse proxy
+* React server-side rendering
+
+I had been exceedingly frustrated waiting for GitHub Pages to support TLS for custom domains. Having a nice CDN with very little setup is nice, but HTTPS is becoming more and more of a hard requirement.
+
+All-in-all, I'm impressed with the server-side performance of React 16, and having zero-latency page transitions is rad.
+
+The development experience using React and my own templates is also significantly better than Jekyll. I gain hot-reloading and a lot of flexibility in how I construct my pages.
+
+The price I pay for this is much more setup and maintenance, as well as hosting costs. I'm confident; we'll see if it pays off.

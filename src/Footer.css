@@ -5,6 +5,21 @@
 
 .FooterInner {
 	max-width: var(--site-width);
-	padding: 2rem var(--site-padding);
+	padding: 1rem var(--site-padding);
 	margin: 0 auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.Item {
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+}
+
+.Icon {
+	height: 1em;
+	margin-right: 0.25em;
 }

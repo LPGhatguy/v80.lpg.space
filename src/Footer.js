@@ -1,12 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import style from "./Footer.css";
+
+import twitter from "../resources/iconmonstr-twitter-1.svg";
+import github from "../resources/iconmonstr-github-1.svg";
+import linkedin from "../resources/iconmonstr-linkedin-3.svg";
+
+const Item = ({ url, title, icon, children }) => (
+	<span className={ style.Item }>
+		<img className={ style.Icon } src={ icon } />
+		<Link title={ title } to={ url }>{ children }</Link>
+	</span>
+);
 
 export default function Footer() {
 	return (
 		<footer className={ style.Footer }>
 			<div className={ style.FooterInner }>
-				Footer stuff here
+				<Item url="https://twitter.com/LPGhatguy"
+					icon={ twitter }
+					title="My Twitter profile">LPGhatguy</Item>
+
+				<Item url="https://github.com/LPGhatguy"
+					icon={ github }
+					title="My GitHub profile">LPGhatguy</Item>
+
+				<Item
+					url="https://www.linkedin.com/in/lucien-greathouse-539bb73b"
+					icon={ linkedin }
+					title="My LinkedIn profile">LinkedIn</Item>
 			</div>
 		</footer>
 	);
