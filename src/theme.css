@@ -1,5 +1,5 @@
 :root {
-	--site-width: 50rem;
+	--site-width: 40rem;
 	--site-padding: 0;
 
 	--font-weight-1: 300;
@@ -9,7 +9,7 @@
 	--color-site-text: rgba(0, 0, 0, 0.9);
 	--color-bg-1: #ddd;
 	--color-bg-2: #ccc;
-	--color-highlight-1: #d00;
+	--color-highlight-1: #af0000;
 }
 
 @media (max-width: 1020px) {

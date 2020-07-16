@@ -17,6 +17,7 @@
 	display: flex;
 	align-items: center;
 	padding: 1rem;
+	color: var(--color-highlight-1);
 }
 
 .Icon {

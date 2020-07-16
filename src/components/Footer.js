@@ -2,9 +2,9 @@ import React from "react";
 
 import style from "./Footer.css";
 
-import twitter from "../resources/iconmonstr-twitter-1.svg";
-import github from "../resources/iconmonstr-github-1.svg";
-import linkedin from "../resources/iconmonstr-linkedin-3.svg";
+import twitter from "../../resources/iconmonstr-twitter-1.svg";
+import github from "../../resources/iconmonstr-github-1.svg";
+import linkedin from "../../resources/iconmonstr-linkedin-3.svg";
 
 const Item = ({ url, title, icon, children }) => (
 	<span className={ style.Item }>

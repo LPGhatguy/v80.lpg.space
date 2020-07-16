@@ -1,0 +1,9 @@
+.Inner {
+	max-width: var(--site-width);
+	margin: 0 auto 1rem auto;
+}
+
+.Title {
+	font-size: 2.4rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}

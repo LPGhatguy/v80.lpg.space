@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import PageBody from "../PageBody";
+import PageBody from "../components/PageBody";
 
 export default function NotFound() {
 	return (

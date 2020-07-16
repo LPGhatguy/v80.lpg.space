@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import PageBody from "../PageBody";
+import PageBody from "../components/PageBody";
 import Article from "../components/Article";
 
 export default function BlogPost({ body, metadata }) {

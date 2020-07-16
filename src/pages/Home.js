@@ -1,27 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import PageBody from "../PageBody";
 import posts from "../posts";
+import PageBody from "../components/PageBody";
 import Article from "../components/Article";
+import Splash from "../components/Splash";
 
 import style from "./Home.css";
-
-function Splash() {
-	return (
-		<div className={ style.Splash }>
-			<div className={ style.SplashInner }>
-				<h1 className={ style.SplashTitle }>
-					Wow!
-				</h1>
-
-				<h2 className={ style.SplashSubtitle }>
-					What a website!
-				</h2>
-			</div>
-		</div>
-	);
-}
 
 export default function Home() {
 	const postList = posts.map(([Body, metadata]) => {
@@ -34,7 +19,7 @@ export default function Home() {
 
 	return (
 		<React.Fragment>
-			<Splash />
+			<Splash title="Latest Posts" />
 
 			<PageBody>
 				{ postList }

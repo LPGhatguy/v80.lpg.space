@@ -13,13 +13,15 @@ const dateToString = date => {
 
 export default function Article({ children, metadata }) {
 	return (
-		<article>
+		<article className={ style.Article }>
 			<h1 className={ style.Title }>
 				<Link to={ metadata.route() }>{ metadata.title }</Link>
 			</h1>
 			<div className={ style.Date }>{ dateToString(metadata.date) }</div>
 
 			{ children }
+
+			<div className={ style.Fade } />
 		</article>
 	);
 }
