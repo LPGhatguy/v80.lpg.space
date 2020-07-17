@@ -8,6 +8,12 @@
 
 .h2 {
 	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.h3 {
+	font-size: 1.2rem;
+	font-weight: 600;
 }
 
 .ul, .ol {
@@ -15,7 +21,7 @@
 	line-height: 1.4;
 }
 
-.p, .ul {
+.p, .ul, .ol, .pre, .blockquote {
 	margin-bottom: 1rem;
 }
 
@@ -27,8 +33,23 @@
 	font-weight: bold;
 }
 
+.del {
+	text-decoration: line-through;
+}
+
 .a {
 	color: blue;
+}
+
+.pre, .inlineCode {
+	font-family: monospace;
+}
+
+.pre {
+	background-color: rgba(0, 0, 0, 0.05);
+	padding: 0.5em;
+	line-height: 1.2;
+	overflow-x: auto;
 }
 
 .blockquote {

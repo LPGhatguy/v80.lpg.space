@@ -33,3 +33,8 @@ body {
 	background-color: var(--color-site-bg);
 	color: var(--color-site-text);
 }
+
+.SiteTitle {
+	font-size: 2.4rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
