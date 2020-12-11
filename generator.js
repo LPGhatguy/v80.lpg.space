@@ -20,7 +20,7 @@ import App from "./src/App";
 const IS_GITHUB_PAGES = true;
 
 // Set to a domain name to have the generator automatically configure a domain.
-const CNAME = "v80.lpg.space";
+const CNAME = "lpg.space";
 
 const BASE_URL = process.env.PARCEL_PUBLIC_URL;
 

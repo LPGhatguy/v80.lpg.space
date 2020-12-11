@@ -38,7 +38,11 @@
 }
 
 .a {
-	color: blue;
+	color: var(--color-highlight-1);
+}
+
+.a:hover, .a:focus {
+	text-decoration: underline;
 }
 
 .pre, .inlineCode {
