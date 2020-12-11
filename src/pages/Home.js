@@ -9,13 +9,17 @@ import Splash from "../components/Splash";
 import style from "./Home.css";
 
 export default function Home() {
-	const postList = posts.map(([Body, metadata]) => {
-		return (
-			<Article key={ metadata.slug() } metadata={ metadata }>
-				<Body />
-			</Article>
-		);
-	})
+	const postList = posts
+		.filter(([Body, metadata]) => {
+			return !metadata.hidden;
+		})
+		.map(([Body, metadata]) => {
+			return (
+				<Article key={ metadata.slug() } metadata={ metadata }>
+					<Body />
+				</Article>
+			);
+		});
 
 	return (
 		<React.Fragment>
