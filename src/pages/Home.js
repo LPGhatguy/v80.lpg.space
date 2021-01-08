@@ -23,7 +23,7 @@ export default function Home() {
 
 	return (
 		<React.Fragment>
-			<Splash title="Latest Posts" />
+			<Splash title="Latest Blog Posts" />
 
 			<PageBody>
 				{ postList }
