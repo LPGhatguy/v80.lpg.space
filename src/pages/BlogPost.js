@@ -4,17 +4,15 @@ import { Helmet } from "react-helmet";
 import PageBody from "../components/PageBody";
 import Article from "../components/Article";
 
-export default function BlogPost({ body, metadata }) {
-	const Body = body;
-
+export default function BlogPost({ children, title, slug, date }) {
 	return (
 		<PageBody>
 			<Helmet>
-				<title>{ metadata.title }</title>
+				<title>{ title }</title>
 			</Helmet>
 
-			<Article metadata={ metadata }>
-				<Body />
+			<Article title={ title } slug={ slug } date={ date }>
+				{ children }
 			</Article>
 		</PageBody>
 	);

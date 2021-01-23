@@ -5,7 +5,7 @@
 
 import Parcel from "parcel-bundler";
 import path from "path";
-import { promises as fs } from "fs";
+import fs from "fs/promises";
 import rimraf from "rimraf";
 
 import React from "react";
@@ -24,25 +24,32 @@ const CNAME = "lpg.space";
 
 const BASE_URL = process.env.PARCEL_PUBLIC_URL;
 
-function main() {
-	build({
+import blogPosts from "./src/allBlogPosts";
+
+async function main() {
+	// A list of the initial pages that should be built. The code as-written
+	// will crawl links to discover any pages linked from these initial
+	// routes, as well.
+	const initialRoutes = [
+		"/",
+
+		// We can pass an object to override the output path of this route,
+		// like if our static content host has specific requirements on 404
+		// pages.
+		{
+			route: "/404",
+			outputPath: "/404.html",
+		},
+	];
+
+    for (const { slug } of blogPosts) {
+        initialRoutes.push(`/post/${ slug }`);
+    }
+
+	await build({
 		entry: "src/index.html",
 		outDir: "dist",
-
-		// A list of the initial pages that should be built. The code as-written
-		// will crawl links to discover any pages linked from these initial
-		// routes, as well.
-		initialRoutes: [
-			"/",
-
-			// We can pass an object to override the output path of this route,
-			// like if our static content host has specific requirements on 404
-			// pages.
-			{
-				route: "/404",
-				outputPath: "/404.html",
-			},
-		],
+		initialRoutes,
 
 		// Each page will be rendered by this function, defined below.
 		renderPage,
@@ -118,11 +125,14 @@ async function build({ entry, outDir, initialRoutes, renderPage }) {
 
 	const publicUrl = process.env.PARCEL_PUBLIC_URL || "/";
 
+    console.log("Generating template with Parcel...");
+
 	const bundler = new Parcel([entry], {
 		publicUrl,
 		watch: false,
 		minify: true,
 		autoInstall: false,
+        logLevel: 2,
 	});
 
 	await bundler.bundle();

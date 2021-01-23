@@ -11,6 +11,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-dynamic-import": "^7.12.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/preset-react": "^7.12.10",
     "@mdx-js/parcel-plugin-mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",

@@ -1,25 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import posts from "../posts";
 import PageBody from "../components/PageBody";
 import Article from "../components/Article";
 import Splash from "../components/Splash";
+import allBlogPosts from "../allBlogPosts";
 
 import style from "./Home.css";
 
 export default function Home() {
-	const postList = posts
-		.filter(([Body, metadata]) => {
-			return !metadata.hidden;
-		})
-		.map(([Body, metadata]) => {
-			return (
-				<Article key={ metadata.slug() } metadata={ metadata }>
-					<Body />
-				</Article>
-			);
-		});
+	const postList = allBlogPosts
+		.filter(({ hidden }) => !hidden)
+		.map(({ slug, title, date, Body }) => (
+			<Article key={ slug } title={ title } slug={ slug } date={ date }>
+				<Body />
+			</Article>
+		));
 
 	return (
 		<React.Fragment>

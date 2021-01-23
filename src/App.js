@@ -10,13 +10,15 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
-import posts from "./posts";
+import allBlogPosts from "./allBlogPosts";
 
 export default function App() {
-	const blogRoutes = posts.map(([body, metadata]) => {
+	const blogRoutes = allBlogPosts.map(({ slug, title, date, Body }) => {
 		return (
-			<Route exact key={ metadata.slug() } path={ metadata.route() }>
-				<BlogPost body={ body } metadata={ metadata } />
+			<Route exact key={ slug } path={ `/post/${ slug }` }>
+				<BlogPost title={ title } slug={ slug } date={ date }>
+					<Body />
+				</BlogPost>
 			</Route>
 		);
 	});

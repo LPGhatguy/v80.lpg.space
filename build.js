@@ -9,13 +9,19 @@ process.env.NODE_ENV = "production";
 
 const publicUrl = process.env.PARCEL_PUBLIC_URL || "/";
 
+console.log("Bundling generator with Parcel...");
+
 const bundler = new Parcel(["generator.js"], {
 	outDir: ".cache/generator",
 	publicUrl,
 	target: "node",
 	watch: false,
-	minify: true,
+	minify: false,
 	autoInstall: false,
+	logLevel: 2,
 });
 
-bundler.bundle().then(() => require("./.cache/generator/generator.js"));
+bundler.bundle().then(() => {
+	console.log("Starting generator...");
+	require("./.cache/generator/generator.js");
+});
